@@ -1,0 +1,61 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>${site.name }</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="${site.name }" />
+  <meta name="keywords" content="${site.name }" />
+  <meta name="description" content="${site.name }" />
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link rel="stylesheet" type="text/css" href="_files/css/style.css"/>
+	<script type="text/javascript" src="_files/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="_files/js/jquery.superslide.2.1.js"></script>
+	<script type="text/javascript" src="_files/js/lk.js"></script>
+	<!-- sarah-gd.com Baidu tongji analytics -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "//hm.baidu.com/hm.js?99b98e01f1fc7941578ffcccf862d7e0";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+ </head>
+ <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+ <div class="w1280">
+ 	[#include "inc_header.html"/]
+    <div class="rightDivBox">
+    	<div class="topBJQ">
+        	<p><img src="_files/picture/20160105134355_397.jpg" alt="庭院设计" width="960" height="250" /></p>
+            <p>与家人走到室外，一杯咖啡，一壶清茶，一次烧烤，一回种植的劳作，感知四季的分明，享受成功的收获。鸟语花香中与自然对话，花园里有你儿时的记忆、有你生活的情趣，使你忘却辛劳愉悦身心！花园是您生活空间的延伸、是您生活方式的完善、是您生活品质的体现、是您产业价值的提升……</p>	
+        </div>
+        <div class="ht30"></div>
+        <div class="Navigation"><a href="/">首页</a><span>></span><a href="javascript:;">花园设计</a><span>></span><a href="javascript:;">工程案例</a></div>
+        <div class="ProjectList">
+        	<ul>
+	        [@InfoList nodeId=node.id limit=6;list] 
+	        	[#list list as info]
+	        	<li>
+					<a href="${info.url }" class="pic">
+					<img src="picture/20160714181648_440.jpg" alt="花园设计" width="292" height="196" />
+					</a>
+                	<a href="${info.url }" class="name">${info.title }</a>
+                    <div class="infor">在繁华的都市，能够拥有这样一处静心的露台空间，一览金鸡湖全景，是一种心灵的释放，心境的提升。</div>
+                    <a href="${info.url }" class="more"></a>
+                </li>
+                [/#list]
+	        [/@InfoList]
+			</ul>
+        </div>
+					<tr class="listPageTr">
+				<td colspan="8" align="center"><div class="pageBoxs"><div class="pages"><b class="page_icon">&nbsp;上一页</b><b>1</b><a href="/products/index/5/?p=2">2</a><a href="/products/index/5/?p=3">3</a><a href="/products/index/5/?p=4">4</a><a href="/products/index/5/?p=5">5</a><a href="/products/index/5/?p=2" class="nextprev">&nbsp;下一页</a></div></div></td>
+			</tr>
+			<div style="clear:both;height:60px;overflow:hidden;"></div>
+		    </div>
+ </div>
+ </body>
+</html>
+[/#escape]

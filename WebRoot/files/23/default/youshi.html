@@ -1,0 +1,70 @@
+﻿[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>${site.name }</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="${site.name }" />
+  <meta name="keywords" content="${site.name }" />
+  <meta name="description" content="${site.name }" />
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="_files/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="_files/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="_files/js/common.js"></script>
+  <script type="text/javascript" src="_files/js/jquery.superslide.js"></script>
+  <!--[if lte IE 6]><script type="text/javascript" src="_files/js/minmax.js"></script><script type="text/javascript" src="_files/js/pngfix.js"></script><script language="javascript" type="text/javascript">EvPNG.fix("#logo img");</script><![endif]-->
+ </head>
+ <body class="body_index">
+  [#include "inc_header.html"/]
+  <!--主体内容 开始-->
+  <div class="picture">
+   <div class="subchannel_main">
+    <div class="subchannel">
+     	[@NodeList parentId=node.parent.id;nodeList]
+ 	 		<ul class="subchannellist">
+  	 	  [#list nodeList as nodet]
+		      <li class="depth1" [#if nodet.id==node.id]id="current"[/#if]>[@A bean=nodet /]</li>
+  		  [/#list]
+  	 		</ul>
+ 	 	[/@NodeList]
+    </div>
+   </div>
+   <!--右侧区域 开始-->
+   <div id="right">
+    <div class="right_title">
+     <!--当前位置 开始-->
+     <div id="location">
+      <b>当前位置：</b>
+      [#list node.hierarchy as n]<a href="${n.url}">${n.name}</a>>[/#list]
+     </div>
+     <!--当前位置 结束-->
+     <h2><img src="_files/images/titleleftbg.png" align="absmiddle" /><a href="${node.url }">${node.name }</a><img src="_files/images/titlerightbg.png" align="absmiddle" /></h2>
+    </div>
+    	[@InfoList nodeId=node.id limit=6;list] 
+     		<div class="right_body">
+		     <ul class="gridlist">
+		      <!--循环开始-->
+		      [#list list as info]
+			      <li><a href="${info.url }" target="_blank"><img src="${info.smallImage }" title="${info.title }" alt="${info.title }" /></a><br /><a href="${info.url }" target="_blank" title="${info.title }">${info.title }</a></li>
+	          [/#list]
+		      <!--循环结束-->
+        	</ul>
+        	<div class="page"></div>
+		    </div>
+          [/@InfoList]
+    <div class="right_bottom"></div>
+   </div>
+   <!--右侧区域 结束-->
+   <div class="clear"></div>
+  </div>
+  <!--主体内容 结束-->
+  <!-- 友情链接 开始-->
+  [#include "inc_link_friend.html"/]
+  <!-- 友情链接 结束-->
+  <!-- 底部版权 开始-->
+  [#include "inc_footer.html"/]
+  <!-- 底部版权 结束-->
+ </body>
+</html>
+[/#escape]

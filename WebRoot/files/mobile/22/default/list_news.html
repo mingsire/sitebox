@@ -1,0 +1,58 @@
+﻿[#escape x as (x)!?html]
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>${site.name }</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="${site.name }" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link href="_files/mobile/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="_files/mobile/js/jquery-1.7.2.min.js"></script>
+  <script src="_files/mobile/js/common.js" type="text/javascript"></script>
+ </head>
+ <body class="body_index">
+  [#include "inc_header.html"/]
+  <!--主体内容 开始-->
+  <div class="single">
+   <div class="subchannel_main">
+    <div class="subchannel">
+     	[@NodeList parentId=node.parent.id;nodeList]
+ 	 		<ul class="subchannellist">
+  	 	  [#list nodeList as nodet]
+		      <li class="depth1" [#if nodet.id==node.id]id="current"[/#if]>[@A bean=nodet /]</li>
+  		  [/#list]
+  	 		</ul>
+ 	 	[/@NodeList]
+    </div>
+   </div>
+   <!--右侧区域 开始-->
+   <div id="right">
+    <div class="right_title">
+     <!--当前位置 开始-->
+     <div id="location">
+      <b>当前位置：</b>
+      [#list node.hierarchy as n]<a href="${n.url}">${n.name}</a>>[/#list]
+     </div>
+     <!--当前位置 结束-->
+     <h2><img src="_files/images/titleleftbg.png" align="absmiddle" />${node.name }<img src="_files/images/titlerightbg.png" align="absmiddle" /></h2>
+    </div>
+    <div class="right_body">
+     <div class="ChannelContent">
+       [#noescape]${node.text}[/#noescape]
+     </div>
+    </div>
+    <div class="right_bottom"></div>
+   </div>
+   <!--右侧区域 结束-->
+   <div class="clear"></div>
+  </div>
+  <!--主体内容 结束-->
+  <!-- 友情链接 开始-->
+  [#include "inc_link_friend.html"/]
+  <!-- 友情链接 结束-->
+  <!-- 底部版权 开始-->
+  [#include "inc_footer.html"/]
+  <!-- 底部版权 结束-->
+ </body>
+</html>
+[/#escape]

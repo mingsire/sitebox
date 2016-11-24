@@ -1,0 +1,89 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="atarm" />
+<title>${site.fullNameOrName}-- Powerd by Jspxcms</title>
+
+<link href="_files/css/style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript"
+	src="_files/js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="_files/js/common.js"></script>
+<script language="javascript" type="text/javascript"
+	src="_files/js/menu.js"></script>
+<script src="_files/js/jquery.kinmaxshow-1.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<!--[if lte IE 6]><script type="text/javascript" src="_files/js/png.js"></script><script type="text/javascript">PNG.fix("*");</script><![endif]-->
+<script src="_files/js/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#kinMaxShow").kinMaxShow();
+		var bodyOpacityHandle = setInterval(function() {
+			var opacity = parseFloat($('body').css('opacity'));
+			if (opacity > 1) {
+				clearInterval(bodyOpacityHandle);
+				return;
+			}
+			$('body').css('opacity', opacity + 0.015);
+		}, 1);
+	});
+</script>
+
+</head>
+<body>
+	[#include "inc_header.html"/]
+	<div id="content">
+		<!--栏目广告开始-->
+		<div class="nycon">
+			<!--栏目名称导航开始-->
+			<div class="dh">
+				<div class="dhname">
+					<img src="${node.smallImage }" width="139" height="32"
+						alt="${node.title }" />
+				</div>
+				<div class="dhclass">
+					<ul>
+						<li><a href="javascript:history.go(-1)" class="weizhi">返回列表</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--end栏目名称导航-->
+			<!--大图轮换区开始-->
+			<!-- 代码 开始 -->
+			<div class="product_ct">
+				[#noescape]${info.text}[/#noescape]
+			</div>
+
+			<div class="banner_index">
+				<a href="javascript:void(0);" class="btn btnPre"
+					id="banner_index_pre"></a> <a href="javascript:void(0);"
+					class="btn btnNext" id="banner_index_next"></a>
+				<ul class="banner_wrap" id="banner_index">
+					[#list info.images as item]
+					<li><a href="#"><img src="${item.image }" /></a></li> [/#list]
+				</ul>
+			</div>
+
+
+			<div class="indexBanner_num" id="index_numIco"></div>
+			<script type="text/javascript">
+				var ShowPre1 = new ShowPre({
+					box : "banner_index",
+					Pre : "banner_index_pre",
+					Next : "banner_index_next",
+					numIco : "index_numIco",
+					loop : 1,
+					auto : 1
+				});
+			</script>
+			<!-- 代码 结束 -->
+
+
+			<!--end大图轮换区-->
+		</div>
+	</div>
+	[#include "inc_footer.html"/]
+</body>
+</html>
+[/#escape]

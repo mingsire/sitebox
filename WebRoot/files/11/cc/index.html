@@ -1,0 +1,197 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="atarm" />
+<title>${site.fullNameOrName} -- Powerd by Jspxcms</title>
+<meta name="description" content="这是JSPXCMS的演示站点，包含了新闻、图集、视频、下载、在线留言等模块，能够轻松方便构件您的站点。" />
+<meta name="keywords" content="演示站 JSPX 站长 资讯 创业 小说程序 运营 管理 " />
+<link href="_files/jspxcms.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="${fore}/jquery.js" ></script>
+<script language="javascript" type="text/javascript" src="_files/jqFancyTransitions.min.js" ></script>
+<script language="javascript" type="text/javascript" src="_files/pic_scroll.js"></script>
+<script language="javascript" type="text/javascript" src="_files/YLMarquee.js"></script>
+<script language="javascript" type="text/javascript" src="_files/common.js"></script>
+<script language="javascript" type="text/javascript" src="_files/litenav.js"></script>
+
+
+ 	<link rel="shortcut icon" href="_files/static/images/favicon.ico" />
+    <link rel="stylesheet" href="_files/css/common.css">
+    <link rel="stylesheet" href="_files/css/pager.css">
+    <link rel="stylesheet" href="_files/css/viewimg.css">
+    <link rel="stylesheet" href="_files/css/detail.css">
+    <link rel="stylesheet" href="_files/css/index.css">
+
+    <!-- 滚动条 -->
+    <link rel="stylesheet" href="_files/css/jquery.mcustomscrollbar.css">
+    <link rel="stylesheet" href="_files/css/init.mcustomscrollbar.css">
+
+    <!-- 上传内容 大赛 -->
+    <link rel="stylesheet" href="_files/css/event.css">
+    <!-- 上传内容 大赛 end -->
+
+    <!-- 需求墙 -->
+    <link rel="stylesheet" href="_files/css/need.css">
+    <script src="_files/js/jquery-1.11.1.min.js"></script>	
+
+	<!-- sso 登录检测 -->
+    <!-- sso 登录检测 end -->
+
+
+</head>
+<script type="text/javascript" src="${ctx}/login_ajax.jspx"></script>
+[#include "inc_header.html"/]
+
+
+<div class="containerwrap">
+<div class="content">
+<div class="mainmodule clearfix">
+    <div class="navbar_m">
+        <p class="allclassify_nm"><a href="http://store.cocos.com/">全部分类</a></p>
+        <ul class="classifylist_nm" id="classifyNavbar">
+         	[@NodeList;list]
+				[#list list as node]
+ 		 		<li><a href="${node.url}" class="first_cnm [#if node.children?size != 0 ]haschild_cnm[/#if] ">${node.name}<b class="${node.number} icon_nm"></b></a>
+ 		 			[#if node.children?size != 0 ]
+	 		 			<div class="childmenu_hcnm">
+							<ol>
+ 		 						[#list node.children as nd]
+									<li><a  href="${nd.url}" >${nd.name }</a></li>
+								[/#list]
+							</ol>
+						</div>
+					[/#if]	
+ 		 		</li>
+				[/#list]
+			[/@NodeList]  
+		</ul>
+    </div>
+    <!-- banner -->
+<div class="bannerarea_m">
+    <ul class="imglist_b clearfix" id="bannerImgBox">
+                [@InfoList attr='focus';list]
+			      [#list list as info]
+			      	<li class="liitem_ib">
+			        	<a href ='${info.url}' class="adstatistics" target="_blank">
+			        		<img src='${info.attrImageUrl}' alt='${info.title}${info.attrImageUrl}' />
+			        	</a>
+			        </li>
+			      [/#list]
+			     [/@InfoList]
+             </ul>
+    			<div class="pointbg_b">
+        			<p class="barpoint_pb clearfix" id="bannerPointBox">
+                         [@InfoList attr='focus';list]
+					      [#list list as info]
+					      	<a href="javascript:void(0)" [#if info_index == 0 ]class="current_bpb"[/#if] ></a>
+					      [/#list]
+					     [/@InfoList]
+                    </p>
+    			</div>
+			</div>
+			<!-- banner end-->
+    <div class="slideimg_m">
+            <a href="javascript:void(0);" class="l_sm" id="arrowLeft"></a>
+        <a href="javascript:void(0);" class="r_sm" id="arrowRight"></a>
+        <div class="imagesbox_sm">
+                <ul id="slideApply" class="applylistwrap ullist_ism clearfix">
+                    [@InfoList attr='recommend' limit=10;list]
+				 	   [#list list as info]
+					      <li>
+					      	<b class="hot_a"></b>
+					      	<a href="${info.url}" target="_blank"  class="itemapply_a">
+					      		 <b class="markbg_ia"></b>
+					      		 <span class="icondis_ia">
+					      		 <img src="${info.largeImage}" alt="${info.title}"/></span>
+                                 <span class="text_ia">${substring(info.title,17,'...')}</span>
+					      	</a>
+					      </li>
+				      [/#list]
+				    [/@InfoList]
+                 </ul>
+            </div>
+		</div>
+		
+	</div>
+	<!-- 分类模块  -->
+<div class="classifymodule clearfix" id="classifyModule">
+
+
+[@NodeList isHidden=false ;list]
+	[#list list as node]
+  		[#if node.number! != 'icon7_nm' && node.number! != 'icon8_nm' && node.number! != 'icon9_nm' && node.number! != 'icon10_nm']
+  <div class="monoblock_c">
+    <h2 class="tit_mc"><a class="cat_tmc" href="#">${node.name }</a></h2>
+            <ul class="ullist_mc">
+            		
+			  	 [@InfoList nodeId=node.id isIncludeChildren=true limit=4;list]
+			  		[#list list as info]
+			  		[#if info_index == 0]
+			  			<li class="firli_umc clearfix">
+                        <a href="#" class="applyicon_fumc" title="${info.title}" >
+                            <b class="markbg_ia"></b>
+								<span>
+								    <img src="${info.largeImage}" alt="${info.title}"/>
+                                </span>
+                        </a>
+                        <a title="${info.title}" href="${info.url}" class="applyname_umc">${info.title}</a>
+                        <p class="score-star scorestar_fumc clearfix">
+                            <b class="star-star full-star"></b>
+                            <b class="star-star full-star"></b>
+                            <b class="star-star full-star"></b>
+                            <b class="star-star full-star"></b>
+                            <b class="star-star empty-star"></b> <span>11.2MB</span>
+                        </p>
+                        <a href="javascript:void(0);" class="btns btn-gray candownapply" data-opera-state="download" data-apply-name="粒子编辑器" data-toolsid="153995" data-pricenum = "0">
+                                <i>免费</i>
+                        </a>
+                        
+                    </li>
+			  		[#else]
+   					<li>
+                        <a href="${info.url}" class="applyname_umc" title="${info.title}">${info.title}</a>
+                        <p class="opear_umc">
+                               <a  href="javascript:void(0);" class="btns btn-gray candownapply" data-opera-state="download" data-apply-name="一键自动生成IOS所有尺寸ICON" data-toolsid="150190" data-pricenum = "0">
+                                    <i>免费</i>
+                              </a>
+                        </p>
+                    </li>
+				    [/#if]
+  				[/#list]
+  			 [/@InfoList]
+  			
+                    </ul>
+                    </div>
+
+[/#if]
+  [/#list]
+ 	[/@NodeList]
+</div>
+<!-- 分类模块 end -->
+    </div>
+    </div>
+
+
+[#include "inc_footer.html"/]
+</body>
+<script src="_files/js/ssoclient.js"></script>		
+<script src="_files/js/common.js"></script>
+<script src="_files/js/browser.js"></script>
+<script src="_files/js/jquery.mcustomscrollbar.js"></script>
+<script src="_files/js/commonsearch.js"></script> <!-- 多级导航、搜索 -->
+<script src="_files/js/viwepager.js"></script> <!-- 图片轮播 -->
+<script src="_files/js/viewimg.js"></script> <!-- 图片预览 -->
+<script src="_files/js/audio.min.js"></script> <!-- mp3 音效预览 -->
+<script src="_files/js/jquery.pager.js"></script> <!-- 分页 -->
+<script src="_files/js/buydialog.js"></script> <!-- 购买apply -->
+<script src="_files/js/applylist.js"></script> <!-- apply list -->
+
+<script src="_files/js/index.js"></script>
+<script>
+    $(function(){
+        indexPage();
+    })
+</script>
+</html>
+[/#escape]

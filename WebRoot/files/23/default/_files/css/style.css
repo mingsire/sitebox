@@ -1,0 +1,136 @@
+﻿@charset "utf-8";/*-----------2012-06-12  lanling   Email:lanling0223#163.com*/
+/* ----------------------------default */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video ,font, button, input, select, textarea{margin:0;padding:0;font-size:100%;outline:none;}
+
+ul,li{list-style:none;}
+h2 a:hover,h3 a:hover{text-decoration:none;}
+table,tr,td{border-collapse:collapse;border:none;}
+body,input,select,button,textarea{font:normal 12px/1.6em "Microsoft YaHei";color:#666;}
+/* ----------------------------links&text */
+a,a:link{color:#666;text-decoration:none;}
+a:visited{;}
+a:active,a:hover{text-decoration:none; color:#09f;}
+a:focus{outline:none;}
+input,textarea,select{outline:none;}
+/* ----------------------------base */
+.dis{display:block;}
+.hide{display:none;}
+.textr{text-align:right;}
+.ht5{height:5px;overflow:hidden;}
+.ht10{height:10px;overflow:hidden;}
+.ht15{height:15px;}
+.ht20{height:20px;}
+.ht25{height:25px;}
+.ht30{height:30px;}
+.ht35{height:35px;}
+.ht40{height:40px;}
+.ht50{height:50px;}
+
+.krelative{position:relative;z-index:2;}
+.kabsolute{position:absolute;}
+.divoverflow{overflow:hidden;}
+/* ----------------------------clear */
+.clr{clear:both;content:".";font-size:0px;height:0px;overflow:hidden;}
+.clearfix {zoom: 1;}
+.clearfix:after {content: '\20';display: block;height: 0;clear: both;visibility: hidden;}
+.fl {float: left !important;display: inline;}
+.fr {float: right !important;display: inline;}
+body{}
+.w1280{width:1280px;margin:0 auto;}
+.pie{behavior: url(js/PIE/PIE.htc);}
+.lkinput{position: relative;}
+.lkinput i{position:absolute;font-style:normal;}
+
+.leftMenu{ position:fixed; width:240px; position:fixed; top:0; background:#fff;}
+.leftMenu a.logo{ margin-top:30px; display:block;}
+.leftMenu a.logo img{ display:block;}
+.leftMenu .topMenu{ margin-top:50px;}
+.leftMenu .topMenu li{ margin-bottom:2px;}
+.leftMenu .topMenu li a.lia{ display:block; height:44px; line-height:44px; text-align:center; background:#d7e7e2; font-size:20px; color:#000;}
+.leftMenu .topMenu li a.lia:hover,.leftMenu .topMenu li.on a.lia{ color:#fff; background:#2c494f;}
+.leftMenu .topMenu li .xlcd{ padding:8px 0 6px; display:none;}
+.leftMenu .topMenu li.cur .xlcd{ display:block;}
+.leftMenu .topMenu li .xlcd a{ display:block; height:40px; line-height:40px; font-size:20px; text-align:center; color:#413e3f;}
+.leftMenu .topMenu li .xlcd a.on,.leftMenu .topMenu li .xlcd a:hover{ color:#75c79f;}
+.leftMenu .bottomMenu{ margin-top:30px;}
+.leftMenu .bottomMenu h3{ height:52px; line-height:52px; font-size:20px; color:#525252; text-align:center; font-weight:normal;}
+.leftMenu .bottomMenu li{ margin-bottom:2px;}
+.leftMenu .bottomMenu li a{ display:block; height:44px; line-height:44px; text-align:center; background:#d7e7e2; font-size:20px; color:#000;}
+.leftMenu .bottomMenu li a:hover,.leftMenu .bottomMenu li.on a{ color:#fff; background:#2c494f;}
+
+.rightDivBox{ margin:0 0 0 320px;}
+.rightDivBox .topBJQ{ line-height:30px; font-size:17px; color:#413e3f; margin-top:55px;}
+
+.Navigation{ height:48px; line-height:48px; font-size:16px; color:#2c494f; color:#2c494f;}
+.Navigation a{ color:#2c494f;}
+
+.ProjectList{ overflow:hidden;}
+.ProjectList ul{ width:1002px;}
+.ProjectList li{ width:292px; float:left; margin:0 42px 34px 0;}
+.ProjectList li a.pic{ display:block;width:292px; height:196px; overflow:hidden;}
+.ProjectList li a.pic img{ display:block;}
+.ProjectList li a.name{ height:50px; line-height:50px; display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; font-size:20px; color:#265141;}
+.ProjectList li div.infor{ height:72px; line-height:24px; overflow:hidden; font-size:16px; color:#413e3f;}
+.ProjectList li a.more{ width:159px; height:40px; display:block; background:url(../images/morebtn.jpg) no-repeat 0 0; margin-top:10px;}
+.ProjectList li a.more:hover{ background-position:0 bottom;}
+
+.PicList{ overflow:hidden;}
+.PicList ul{ width:990px;}
+.PicList li{ width:300px; height:202px; float:left; margin:0 30px 30px 0;}
+.PicList li a{ display:block; width:300px; height:202px; overflow:hidden;}
+
+.llpage{ height:70px;}
+.llpage a{ height:40px; line-height:40px; background:#d7e7e2; padding:0 15px; font-size:14px; color:#000;}
+.llpage a:hover{ color:#fff; background:#415b60;}
+.llpage a.prev{ float:left;}
+.llpage a.next{ float:right;}
+
+.newList{ margin-top:40px;}
+.newList .titleBox{ height:70px; line-height:70px; font-size:24px; border-bottom:2px solid #2c494f; color:#2c494f;}
+.newList .List{ margin-top:20px;}
+.newList li{ height:38px; line-height:38px; font-size:16px;}
+.newList li span{ float:right; color:#555;}
+.newList li a{ display:block; margin-right:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+.newDetail{ margin-top:40px;}
+.newDetail .titleBox{ height:70px; line-height:70px; font-size:24px; border-bottom:2px solid #2c494f; color:#2c494f; text-align:center;}
+.newDetail .singlePage{ line-height:30px; font-size:16px; border:1px;}
+.newDetail .llpage{ margin-top:15px;}
+
+.iMain{width:1308px; height:790px; position:relative; margin:25px auto;}
+.iMain .iBanner{ width:1308px; height:790px; position:relative;}
+.iMain .iBanner .bd li{ width:1308px; height:790px;}
+.iMain .iBanner .bd li img{ display:block;}
+.iMain .iBanner .bd li a{ display:block; position:relative;}
+.iMain .iBanner .bd li a .wz{ width:650px; position:absolute; left:545px; bottom:100px; line-height:36px; font-size:24px; color:#fff;}
+.iMain .iBanner .hd{ position:absolute; bottom:10px; right:10px;}
+.iMain .iBanner .hd span{ width:16px; height:16px; float:left; margin-right:8px; background:url(../images/ibannericon.png) no-repeat 0 0; cursor:pointer;}
+.iMain .iBanner .hd span.on{ background-position:right 0;}
+.iMain .iMenu{ width:290px; height:790px; position:absolute; top:0; left:170px;}
+.iMain .iMenu a.logo{ width:290px; height:190px; display:block; overflow:hidden; background:url(../images/ibannerbg01.png);}
+.iMain .iMenu a.logo img{ margin:35px 0 0 25px;}
+.iMain .iMenu .topMenu li{ position:relative; margin-top:2px;}
+.iMain .iMenu .topMenu li a.lia{ display:block; height:56px; line-height:56px; background:url(../images/ibannerbg02.png); font-size:20px; color:#000; text-align:center;}
+.iMain .iMenu .topMenu li.on a.lia,.iMain .iMenu .topMenu li a.lia:hover{ background:url(../images/ibannerbg03.png); color:#fff;}
+.iMain .iMenu .topMenu .xlcd{ width:146px; padding-left:3px; background:url(../images/ibannerbg04.png); position:absolute; left:290px; top:-16px; display:none;}
+.iMain .iMenu .topMenu li.on .xlcd{ display:block;}
+.iMain .iMenu .topMenu .xlcd a{ display:block; height:30px; line-height:30px; text-align:center;background:url(../images/ibannerbg02.png); color:#000; font-size:15px; margin-bottom:2px;}
+.iMain .iMenu .topMenu .xlcd a:hover{background:url(../images/ibannerbg05.png);}
+.iMain .iMenu .bottomMenu{ background:#b7d5c7; padding:12px 0 0; height:118px; background:url(../images/ibannerbg05.png); margin-top:2px;}
+.iMain .iMenu .bottomMenu h3{ height:22px; line-height:42px; font-size:20px; color:#2c494f; text-align:center; font-weight:normal;}
+.iMain .iMenu .bottomMenu li{ height:38px; line-height:38px;}
+.iMain .iMenu .bottomMenu li a{ display:block; height:38px; line-height:38px; font-size:20px; text-align:center; color:#000;}
+.iMain .iMenu .bottomMenu li a:hover{ color:#416a6d;}
+.iMain .iMenu .footCopy{ height:165px; padding:13px 20px 0; background:url(../images/ibannerbg05.png);}
+.iMain .iMenu .footCopy .name{ line-height:34px; font-size:17px; color:#000;}
+.iMain .iMenu .footCopy .en{ line-height:20px; font-size:14px; color:#000;}
+.iMain .iMenu .footCopy .cn{ line-height:20px; font-size:14px; color:#000;}
+
+/*分页*/
+.pages{text-align: center; margin: 0 auto;}
+.pages a{display: inline-block;padding: 0 14px; line-height: 36px;margin: 0 3px;border: 1px solid #ccc;}
+.pages a{background: #ffffff;}
+.pages a:hover{text-decoration: none;background:#f6f6f6; color:#000000 }
+.pages b{display: inline-block;padding: 0 14px; line-height: 36px;margin: 0 3px;border: 1px solid #ccc;background: #f6f6f6;color: #000000 ;}
+.pages .nextprev{font-weight: normal;}
+.pages .page_icon{font-weight: normal;}

@@ -1,0 +1,190 @@
+﻿[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>${site.name }</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="${site.name }" />
+  <meta name="keywords" content="${site.name }" />
+  <meta name="description" content="${site.name }" />
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="_files/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="_files/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="_files/js/common.js"></script>
+  <script type="text/javascript" src="_files/js/jquery.superslide.js"></script>
+  <!--[if lte IE 6]><script type="text/javascript" src="_files/js/minmax.js"></script><script type="text/javascript" src="_files/js/pngfix.js"></script><script language="javascript" type="text/javascript">EvPNG.fix("#logo img");</script><![endif]-->
+ </head>
+ <body class="body_index">
+  [#include "inc_header.html"/]
+  <!--主体内容 开始-->
+  <!--第四行频道 开始-->
+  [@Node id=337;i]
+     [#if i??]
+	  <div id="floor_1_main">
+	   <div id="floor_1">
+	    <div id="floor_1_1">
+	     <div class="left_title1">
+	      <a href="${i.url }" target="_blank" title="${i.name }">${i.name }</a>
+	     </div>
+	     <div class="left_body1">
+	      <div class="ChannelSContent">
+	      	${i.metaDescription }
+	       <a href="${i.url }" target="_blank">【更多】</a>
+	      </div>
+	     </div>
+	     <div class="left_bottom1">
+	      <a href="${i.url }" target="_blank" title="查看更多">查看更多</a>
+	     </div>
+	    </div>
+	    <div id="floor_1_2">
+	     <ul class="gridlist1">
+	      <!--循环开始-->
+	      [@NodeList parentId=i.id;nodeList]
+	  	 	  [#list nodeList as node]
+			    <li class="li${node_index+1 }"><a href="${node.url }" target="_self"><img src="${node.smallImage}" alt="${node.name }" title="${node.name }" /></a><br /><span><a href="${node.url }" target="${node.name }">${node.name }</a></span></li>
+	  		  [/#list]
+	 	 [/@NodeList]
+	      <!--循环结束-->
+	     </ul>
+	    </div>
+	   </div>
+	  </div>
+      [/#if]
+  [/@Node]
+  <!--第三行频道 开始-->
+  [@Node id=334;i]
+     [#if i??]
+     <!-- 
+	  <div id="floor_2_main">
+	   <div id="floor_2">
+	    <div class="left_title2">
+	     <a href="/news.html" target="_blank" title="新闻资讯">新闻资讯</a>
+	    </div>
+	    <div class="left_body2">
+	     <ul class="textlist1">
+	      <li class="li0"><a href="/industrytrends/195.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="包装设计公司展露需求热点" src="picture/1446608425.jpg" /></a><a href="/industrytrends/195.html" target="_blank" title="包装设计公司展露需求热点" class="InfoTitle">包装设计公司展露需求热点</a><span class="InfoTime">2015-11-04</span><p> 现时的设计公司样本最常见的形式仍是铜版纸彩色印刷，有单页和多页折叠（对折、多折）等多种形式，根据需要还可设计成立体结构。为传达相应的包装设计，样本的内容元素一般同时包括图形和文字，图形中有产品的品牌包装设计、标准字等，还通常有产品的实物照片，以提供产品的直观形象。文字、图表包装设计等内容是为详细地解决产品拍案统一品牌的有关信息，如型号、功能、操作提示、特点、服务细则、购买地点、厂商联系地址、...</p></li>
+	      <li class="li1"><a href="/industrytrends/194.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="标志设计怎样引导消费" src="picture/1446608270.jpg" /></a><a href="/industrytrends/194.html" target="_blank" title="标志设计怎样引导消费" class="InfoTitle">标志设计怎样引导消费</a><span class="InfoTime">2015-11-04</span><p> 可能大家对于引导消费这个词还比较陌生，那什么是标志设计引导消费呢？今天小编就来为大家谈谈这个话题。引导消费在标志设计行业中是非常重要的，在网络营销中也是更重要。 所谓引导消费就是在顾客在不明确自己的消费观念的时候来起一个引导作用，就好比商场里面导购员，当你想购买一件商品却又很迷茫的时候，导购员会为你耐心介绍，从而达到你购买消费的目的。我们设计公司行业就是要把这种引导消费的观点和技巧融...</p></li>
+	      <li class="li0"><a href="/industrytrends/193.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="品牌的终极：信仰！" src="picture/1446608152.jpg" /></a><a href="/industrytrends/193.html" target="_blank" title="品牌的终极：信仰！" class="InfoTitle">品牌的终极：信仰！</a><span class="InfoTime">2015-11-04</span><p> 多数品牌在为良好的品牌认知而努力，有一些品牌正在尽力做到品牌信任，而很少有品牌能够建立起美誉和忠诚，而如果要使得消费者像对待自己信仰的神明一样去崇敬、去爱戴，那么难度更是可想而知。 一些新生的产品品牌，我们正在知晓、认知，比如恒大冰泉、娃哈哈富氧水等，我们甚至还找不到渠道去购买、或者来不及去尝试； 有一些品牌我们产生过兴趣，也发生过购买，但后来也不会再去尝试了，比如格瓦斯或某...</p></li>
+	      <li class="li1"><a href="/industrytrends/192.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="设计公司探索生活的新概念" src="picture/1446607864.jpg" /></a><a href="/industrytrends/192.html" target="_blank" title="设计公司探索生活的新概念" class="InfoTitle">设计公司探索生活的新概念</a><span class="InfoTime">2015-11-04</span><p> 作为我国沿海发达城市的发展可以说是日新月异的，绝大多数分布在天河区、海珠区以及白云区的设计公司大大小小有将近还百家。在进行创意思考时，应该从自己的创意出发，才能够比较容易发挥创意。假使你正要为某个设计公司的设计产品，设计广告文案，该从正面角度或是负面角度切入？要诉诸于整体社会的情绪还是某个特殊的事件？该采取抽象的或是具体的意象？还要在国内交易会上大放异彩？这些问题答案就在于，你自己所擅长的思...</p></li>
+	      <li class="li0"><a href="/industrytrends/191.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="设计公司保护文化的辐射能力" src="picture/1446607815.jpg" /></a><a href="/industrytrends/191.html" target="_blank" title="设计公司保护文化的辐射能力" class="InfoTitle">设计公司保护文化的辐射能力</a><span class="InfoTime">2015-11-04</span><p> 自我国改革开放以来，人们一直认为中心城市就是经济发达的城市，这其实是不太准确的，至少是片面的，经济固然重要，但是文化艺术的建设也是重要的指标之一。标志设计水平说到底是一种文化能力。设计公司的发达与否与它背后潜藏着的文化能量和能力紧密相关。凡是设计发达的地方，往往是世人公认的中心城市，这也是理性市场和感性情感的交接的体现，也是我们社会文明进步的体现。 设计公司虽然没有那些大城市的恢弘、...</p></li>
+	      <li class="li1"><a href="/companynews/190.html" target="_blank"><img class="imgborder" alt="{f.InfoTitle}" title="某某广告与沃尔玛（中国）达成长期合作" src="picture/1446607398.jpg" /></a><a href="/companynews/190.html" target="_blank" title="某某广告与沃尔玛（中国）达成长期合作" class="InfoTitle">某某广告与沃尔玛（中国）达成长期合作</a><span class="InfoTime">2015-11-04</span><p>世界零售业巨子美国沃尔玛公司，沃尔玛已在全球27个国家拥有近10,000家商店。自2006年金泰广告与沃尔玛首次合作，一直坚持“高品质、高服务、高要求、高标准”的原则，深受沃尔玛信任，长达8年的合作里，无论是标识标牌、丝印标牌、户外媒体宣传从未遭到客户投诉。金泰广告竭力让客户省心、省事，使众多品牌客户均选择金泰广告作为广告供应商。</p></li>
+	     </ul>
+	    </div>
+	    <div class="left_bottom2"></div>
+	   </div>
+	  </div>
+      -->
+  	[/#if]
+  [/@Node]
+  <!--第三行频道 结束-->
+  <!--第二行频道 开始-->
+  [@Node id=343;i]
+     [#if i??]
+	  <div id="floor_3_main">
+	   <div id="floor_3">
+	    <a href="${i.url }" target="_blank" title="精品案例"><img src="${i.smallImage }" alt="${i.name }" title="${i.name }" /></a>
+	   </div>
+	  </div>
+  	[/#if]
+  [/@Node]
+  [@Node id=333;i]
+     [#if i??]
+	  <div id="floor_4_main">
+	   <div id="floor_4">
+	    <div class="left_title3">
+	     <a href="${i.url }" target="_blank" title="${i.name }">${i.name }</a>
+	     <br />
+	     <span>超越预期，做到你想不到</span>
+	    </div>
+	    <div class="left_body3">
+	     <ul class="gridlist2">
+	      <!--循环开始-->
+	      [@InfoList nodeId=i.id limit=6;list] 
+	  	 	  [#list list as info]
+			      <li><a href="${info.url }" title="${info.name }" target="_blank"><img src="${info.smallImage}" title="${info.name }" alt="${info.name }" /></a><br /><a class="InfoTitle" href="${info.url }" title="${info.name }" target="_blank">${info.name }</a></li>
+	  		  [/#list]
+	 	  [/@InfoList]	
+	      <!--循环结束-->
+	     </ul>
+	    </div>
+	    <div class="left_bottom3"></div>
+	   </div>
+	  </div>
+  	[/#if]
+  [/@Node]
+  <div id="floor_5_main">
+   <div id="floor_5">
+    <div id="floor_5_1">
+     <div class="left_title4">
+      <a href="/aboutus.html" target="_blank" title="关于我们">关于我们</a>
+     </div>
+     <div class="left_body4">
+      <span>HELLO! 这里是某某广告设计公司 赶紧离开那乏味的广告套路，加入我们——创意包装设计、移动互联网传播、随时随地 打广告..... 若您阅览以上信息之后，有合作意向，请您为我们留言或使用以下方式联系我们，我们 会在第一时间尽快给您回复，并为您提供最真诚的服务，谢谢您的支持。</span>
+     </div>
+     <div class="left_bottom4">
+      <div class="left_title3"></div>
+      <div class="left_body3">
+       <div class="contact_wrap1">
+        <b class="ico2">电话：</b>010-12345678
+        <br />
+        <b class="ico3">邮件：</b>
+        <a class="__cf_email__" href="#" data-cfemail="7c4d4e4f48493c0d0d521f1311">xxx@admin.com</a>
+        <br />
+        <b class="ico4">地址：</b>北京市海淀区学院路春天花园8栋906
+        <br />
+       </div>
+      </div>
+      <div class="left_bottom3"></div>
+     </div>
+    </div>
+    <div id="floor_5_2">
+     <div class="message_title1">
+      我要留言
+     </div>
+     <div class="message_body1">
+      <input type="hidden" name="__hash__" value="e251273eb74a8ee3f661a7af00915af1_331348cbca75d777e8106823b69d5da2" />
+      <table class="guestbook_table">
+       <form method="post" id="frmGuestBook" action="/index.php/channel/guestbookadd/l/cn"></form>
+       <tbody>
+        <tr>
+         <th>标题<span class="required">*</span></th>
+         <td><input id="MessageTitle" name="MessageTitle" type="text" class="form_text" maxlength="100" value="" /></td>
+        </tr>
+        <tr>
+         <th>内容</th>
+         <td><textarea id="MessageContent" name="MessageContent" class="form_textarea"></textarea></td>
+        </tr>
+        <tr>
+         <th>姓名</th>
+         <td><input id="GuestName" name="GuestName" type="text" class="form_text" maxlength="100" value="" /></td>
+        </tr>
+        <tr>
+         <th>电话</th>
+         <td><input id="Contact" name="Contact" type="text" class="form_text" maxlength="100" value="" /></td>
+        </tr>
+        <tr>
+         <th>验证码<span class="required">*</span></th>
+         <td><input id="verifycode" class="form_text_verifycode" name="verifycode" type="text" maxlength="4" /></td>
+        </tr>
+        <tr>
+         <td colspan="2" class="operation"><input class="form_button btn" type="submit" name="submit" value="提交" /></td>
+        </tr>
+        <input type="hidden" name="__hash__" value="e251273eb74a8ee3f661a7af00915af1_331348cbca75d777e8106823b69d5da2" />
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--第二行频道 结束-->
+  <!--主体内容 结束-->
+  <!-- 友情链接 开始-->
+  [#include "inc_link_friend.html"/]
+  <!-- 友情链接 结束-->
+  <!-- 底部版权 开始-->
+  [#include "inc_footer.html"/]
+  <!-- 底部版权 结束-->
+ </body>
+</html>
+[/#escape]

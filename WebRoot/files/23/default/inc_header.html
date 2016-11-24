@@ -1,0 +1,36 @@
+<div class="leftMenu">
+	<a href="/" class="logo"><img src="_files/picture/logo.png" width="240" height="120" /></a>
+	<div class="topMenu">
+		[@NodeList ;nodeListt]
+        	<ul>
+  	 	  [#list nodeListt as nodet]
+		      <li><a href="javascript:;" class="lia">${nodet.name }</a>
+		      	[@NodeList parentId=nodet.id;nodeList]
+                	<div class="xlcd">
+		      		[#list nodeList as nodes]
+     					<a href="${nodes.url }" [#if nodes.id == node.id]class='on'[/#if] >${nodes.name }</a>
+					[/#list]
+					</div>
+				[/@NodeList]		                    
+               	</li>
+  		  [/#list]
+  	 		</ul>
+ 	 	[/@NodeList]
+	</div>
+	<div class="bottomMenu">
+		<h3>最新动态</h3>
+		<ul>
+						<li class=""><a href="/news/index/10">媒体报道</a></li>
+						<li class=""><a href="/news/index/11">行业新闻</a></li>
+					</ul>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$('.leftMenu .topMenu ul li .xlcd').each(function(){
+		if($(this).find('a').hasClass('on')){
+			$(this).parents('li').addClass('cur on');
+		}
+	})
+})
+</script>

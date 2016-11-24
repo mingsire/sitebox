@@ -1,0 +1,71 @@
+	<header id="masthead" class="site-header" role="banner">
+		<div class="container">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<h1 class="menu-toggle">
+					<i class="icon-list2"></i>
+				</h1>
+				<div class="header-search-icon">
+					<i class="icon-search"></i>
+				</div>
+				<form role="search" method="get" class="search-form"
+					action="http://ymb.me/">
+					<button type="submit" class="search-submit">
+						<i class="icon-search"></i>
+					</button>
+					<label> <span class="screen-reader-text">搜索：</span> <input
+						type="search" class="search-field" placeholder="Search" value=""
+						name="s" title="Search for:" />
+					</label> <input type="hidden" name="post_type" value="download" />
+				</form>
+				<div class="main-menu">
+					<ul id="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95" class="menu">
+						<li class="current-cart"><a href="#"><i class="icon-cart"></i>
+								<span class="edd-cart-quantity">0</span></a>
+							<ul class="sub-menu nav-menu">
+								<li class="widget"><p class="edd-cart-number-of-items"
+										style="display:none;">
+										购物车中的商品数量: <span class="edd-cart-quantity">0</span>
+									</p>
+									<ul class="edd-cart">
+										<li class="cart_item empty"><span class="edd_empty_cart">您的购物车是空的。</span></li>
+										<li class="cart_item edd_subtotal" style="display:none;">小计：
+											<span class="subtotal">CNY 0</span>
+										</li>
+										<li class="cart_item edd_checkout" style="display:none;"><a
+											href="http://ymb.me/%e4%bb%98%e6%ac%be/">付款</a></li>
+									</ul></li>
+							</ul></li> 
+						[@NodeList;list] [#list list as node]
+							<li id="menu-item-70"
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70">
+								<a href="${node.url}">${node.name}</a>
+								
+								[@NodeList parentId=node.id;nodeList]
+									<ul class="sub-menu">
+										[#list nodeList as n]
+											<li id="menu-item-169"
+												class="menu-item menu-item-type-taxonomy menu-item-object-download_category menu-item-169"><a
+												href="${n.url}">${n.name}</a></li>
+										[/#list]
+									</ul>
+								[/@NodeList]
+							</li> 
+						[/#list] [/@NodeList]
+					</ul>
+					</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- #site-navigation -->
+			<div class="site-branding">
+				<a href="http://ymb.me/" title="云模版" rel="home"
+					class="custom-header"><img src="_files/picture/cropped-ymb3.png"
+					alt="" /></a>
+				<h1 class="site-title">
+					<a href="http://ymb.me/" title="云模版" rel="home">云模版</a>
+				</h1>
+				<h2 class="site-description screen-reader-text">你的主题/模板/创意/数字作品交易市场！</h2>
+			</div>
+		</div>
+	</header>
+

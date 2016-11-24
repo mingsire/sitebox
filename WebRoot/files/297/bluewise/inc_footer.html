@@ -1,0 +1,34 @@
+<!--底部--><div id="bottom_bg">
+<div id="bottom" style="height:63px;background-image:none;background-color:#FFFFFF;background-repeat:repeat;">
+	<div class="inner"></div>
+<div id="boxf732049757d722d433d4033f05714c1d" class="block block_text  add " style="border-top:#E7E6E6 px dashed;border-right: px dashed;border-bottom: px dashed;border-left: px dashed;width:100%;height:63px;top:0px;left:0px; overflow:hidden;z-index:110; background-color:#E93424;  background-repeat:repeat; "></div><div id="box6afb7eaa0954e4be3ec10e608b0693be" class="block block_text  add " style="border-top: px dashed;border-right: px dashed;border-bottom: px dashed;border-left: px dashed;width:100%;height:31px;top:19.984375px;left:0px; overflow:hidden;z-index:118; background-repeat:repeat; "><div style="text-align:left;"><span style="line-height:1.5;color:#ffffff;font-size:16px;margin-left:20px;">${site.name} &nbsp; CHINA &nbsp;MOUMOU CO., LTD. &nbsp; ©Copyright（版权所有）</span></div></div><div id="boxaf28037dc21fedb68cf53f8f0f8f5b70" class="block block_menu2  class='tm5 last' add " style="width:100%;height:31px;top:19.984375px;left:0px;z-index:999999;"><div id="menu30519" class="menu">
+<ul class="menu2">
+		[@NodeList;list]
+			[#list list as node]
+ 		 		<li class='tm${node_index+2} [#if !node_has_next]last[/#if]'><a href="[#if node_index==0]${ctx}/[#else]${node.url}[/#if]">${node.name}</a></li>
+			[/#list]
+		[/@NodeList]
+</ul></div>
+<script>
+function menuStartList(id) {
+if (window.ActiveXObject&&!window.XMLHttpRequest) {
+var navRoot = document.getElementById(id).getElementsByTagName('UL')[0];
+for (i=0; i<navRoot.childNodes.length; i++) {
+var node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+	node.onmouseover=function(){this.className+=" over";}
+	node.onmouseout=function(){this.className=this.className.replace(" over", "");}
+}
+}
+}
+}
+menuStartList("menu30519");
+</script>
+</div></div>
+
+</div>
+
+
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='${ctx}/visit_log.jspx%3FsiteId%3D${site.id}%26url%3D")+document.location.href+unescape("%26referrer%3D")+document.referrer+unescape("' type='text/javascript'%3E%3C/script%3E"));
+</script>

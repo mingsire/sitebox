@@ -1,0 +1,65 @@
+<!--Logo 开始-->
+  <div id="logo_main">
+   <div id="logo">
+    <!--网站Logo 开始-->
+    <div class="WebLogo">
+     <a href="/" target="_self"><img src="_files/picture/logo.png" title="${site.name }" alt="${site.name }" /></a>
+    </div>
+    <!--网站Logo 结束-->
+    <div id="navigation">
+     <ul class="navigationlist">
+     	[@NodeList;list]
+			[#list list as nodet]
+	 			<li><a href="[#if nodet_index==0]${ctx}/[#else]${nodet.url}[/#if]" [#if nodet.id==node.id]class="current"[/#if]>${nodet.name}</a>
+	 				[@NodeList parentId=nodet.id;nodeList]
+			 			<ul class="subnavigationlist">
+							[#list nodeList as newnode]
+						        <li><a href="${newnode.url}" target="_self">${newnode.name}</a></li>
+							[/#list]
+       					</ul>
+					[/@NodeList]
+	 			</li>
+			[/#list]
+		[/@NodeList]
+     </ul>
+    </div>
+   </div>
+  </div>
+  <!--Flash幻灯片 开始-->
+  <!--
+<div id="banner_main"><div id="banner"></div></div>-->
+  <!--Flash幻灯片 结束-->
+  <!--JS幻灯片 开始-->
+  
+  [@InfoList attr='focus';list]
+	<div id="banner_main">
+	   <!--幻灯片 开始-->
+	   <div id="banner">
+	    <ul class="bannerlist">
+	      [#list list as info]
+	         <li style="background:#2B8A0E; "><a href ='${info.url}' target="_blank"><img src="${info.attrImageUrl}" title="${info.attrImageUrl}" alt="${info.title}--${info.attrImageUrl}"/></a></li>
+	      [/#list]
+	    </ul>
+	   </div>
+	   <div class="hd">
+	    <ul></ul>
+	   </div>
+	   <!--幻灯片 结束-->
+    </div>
+  [/@InfoList]
+  <script>		if( $(".bannerlist li").length > 0 ){
+			$('#banner_main').slide({ titCell:'.hd ul', mainCell:'#banner ul', autoPlay:true, autoPage:true, delayTime:500, effect:'left'});
+			$(window).resize(function() {  CenterBanner(); });
+			$(document).ready(function(e) { CenterBanner(); });
+		}else{
+			$("#banner_main").hide();
+		}
+		function CenterBanner(){
+			var imgWidth = parseInt( $(".bannerlist li img:first").width() );
+			if( imgWidth <= 0 ) return;
+			var winWidth = parseInt( $(window).width() );
+			var offset = parseInt( (winWidth-imgWidth)/2 );
+			$(".bannerlist li img").css("margin-left", offset+'px' );
+		}
+	</script>
+  <!--JS幻灯片 结束-->

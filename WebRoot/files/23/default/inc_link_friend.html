@@ -1,0 +1,28 @@
+
+  <div id="link_main">
+   <div id="link">
+    <div class="link_title">
+     <h2>友情链接</h2>
+    </div>
+    <div class="link_body">
+     <div class="link_pic">
+      <ul>
+       <!--循环开始-->
+       [@FriendlinkList;list]
+			[#list list as friendlink]
+		       <li><a href="${friendlink.url}" target="_blank"><img src="${friendlink.logo}" title="${friendlink.name}" alt="${friendlink.name}" /></a></li>
+			[/#list]
+		[/@FriendlinkList]
+       <!--循环结束-->
+      </ul>
+     </div>
+     <div class="link_text">
+      <ul>
+       <!--Link循环开始-->
+       <!--Link循环结束-->
+      </ul>
+     </div>
+    </div>
+    <div class="link_bottom"></div>
+   </div>
+  </div>

@@ -1,0 +1,102 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>${site.fullNameOrName}</title>
+<script src='_files/js/is_mobile.js' type='text/javascript'></script>
+<link href="_files/css/common.css" rel="stylesheet" type="text/css" />
+<link href="_files/css/style.css" rel="stylesheet" type="text/css" />
+<script src="_files/js/main.js"></script>
+<script src='_files/js/jquery.js' type='text/javascript'></script>
+<script>$(function(){if($(".menu .menu2")){$(".menu .menu2").children().mouseout(function(){$(this).removeClass("current");});}});</script>
+<script src="_files/js/common.js" type="text/javascript"></script>
+
+</head>
+<body>
+<!--顶部-->
+<script src="_files/js/ubox.js"></script>
+<div id="index">
+[#include "inc_header.html"/]
+
+<div id="mainmenu_bg">
+<div id="mainmenu"></div>
+</div><div id="banner_bg">
+<div id="banner" style="height:480px;background:none;"><div id="box15a42c1646fee0042302653e2910092b" class="block block_picture  add " style="width:100%;height:480px;top:0px;left:0px; overflow:hidden;z-index:110;"><table width="100%" height="100%" cellpadding="0" cellspacing="0"><tr><td align="center"><img border="0" src="_files/picture/first.jpg"  width="100%"  style=""  alt="" title=""/></td></tr></table>
+<input type="hidden" id="30520" value="bbx/upimages/pkgimg/first.jpg" />
+</div><div id="boxda30abd72c78b3be45f80c65fb9eb2ad" class="block block_text  iscenter  add " style="width:140px;height:55px;top:120px;left:50%;margin-left:-70px; overflow:hidden;z-index:118;"><div class="qw">经营理念</div>
+<style>
+.qw{background: rgba(255,255,255,.66); color: #000;  display: inline-block;  padding: 10px 30px;  position: relative;  font-size: 20px;  margin-bottom: -11px;}
+</style></div><div id="boxbf30b691391de03fdaa2df43a58e76c1" class="block block_text  iscenter  add " style="width:547px;height:151px;top:148px;left:50%;margin-left:-273.5px; overflow:hidden;z-index:116;"><div class="ww">好好生活，投资的事情让我们来做吧！</div>
+<style>
+.ww{ background: rgba(0,0,0,.45); margin-top: -13px; color: #fff; padding: 55px 56px; display: inline-block; font-size: 25px; text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.53);  box-shadow: 0px 5px 9px 6px rgba(0, 0, 0, 0.25); }
+</style></div><div id="boxd613ca9ece1fec54ec026f15b9a000b2" class="block block_text  iscenter  add " style="width:188px;height:103px;top:357px;left:50%;margin-left:-94px; overflow:hidden;z-index:110;"><div class="ee"><a href="#" target="_blank" style="color:#FFF;">XXX开始接受预定！</a></div>
+<style>
+.ee a{font-size: 16px; color: #fff; width:188px;height:30px;padding: 18px 22px;display: inline-block; background: #222;}
+.ee a:hover{font-size: 16px; color: #fff; padding: 18px 22px; display: inline-block; background: #646464;}
+</style></div></div>
+</div>
+<!--内容-->
+<div id="container_bg">
+<div id="container" style="height:970px;background-image:none;background-color:#F5F5F5;background-repeat:repeat;">
+	<div class="inner">
+		<!--part1--></div>
+
+<div id="box2f7abb37320b715c8ed68c86d29d93a7" class="block block_coupon  add " style="top:-48px;left:804px; overflow:hidden;z-index:110;">请双击选择优惠券</div><div id="box1499a983c3cb5d60d1e7d7d1419144b0" class="block block_news  iscenter  add " style="width:1360px;height:477px;top:493px;left:50%;margin-left:-680px; overflow:hidden;z-index:118;">
+<div id="cef762ecebfd6ff463ce4fb05f095d92">
+
+	<ul id="boxNewsList">
+		[@InfoList limit=3;list] 
+		  [#list list as info]
+        	<li class="sumary_list" style="background:none"><img src="${info.smallImage }" class="News_img" width="100" height="100" style="float:left;" onclick="location.href='${info.url }" /><span id="sum_title"><a href="${info.url }" target="_blank" style=";background:none">${info.title }</a><span class="newsTime">(${info.publishDate?string('yyyy-MM-dd')})</span></span><br /><span class="show_all"><a href="${info.url }" target="_blank" style="">[查看全文]</a></span></li>
+          [/#list]
+        [/@InfoList]
+    </ul> 
+</div>
+
+</div><div id="box0e5302a229a01e20cf4e29ae4f352c54" class="block block_text  iscenter  add " style="border-top: px dashed;border-right: px dashed;border-bottom: px dashed;border-left: px dashed;width:1420px;height:338px;top:0px;left:50%;margin-left:-710px; overflow:hidden;z-index:118; background-repeat:repeat; "><div class="tt">
+<ul>
+<li>
+<div id="t1"></div>
+<div style="width:300px;">
+<h2>专业优选</h2>
+<p style="margin:20px 0;">专业投研团队，深入调研上市公司，遴选高增长股票入池，产品收益远超同期大盘指数</p>
+</div>
+</li>
+<li>
+<div id="t2"></div>
+<div style="width:300px;">
+<h2>公司理念</h2>
+<p style="margin:20px 0;">好好生活，投资的事就让进锋来做吧！ 致力于成为一家受人尊敬的资产管理公司</p>
+</div>
+</li>
+<li>
+<div id="t3"></div>
+<div style="width:300px;">
+<h2>专属服务</h2>
+<p style="margin:20px 0;">专业投资顾问将与您沟通投资需求，协助您深入了解投资产品，提供专属服务</p>
+</div>
+</li>
+</ul>
+</div>
+<style>
+.tt ul li{list-style-type:none;text-align:center;margin-left:105px;float:left;background-color:#FFF;padding:0 15px 30px 15px;margin-top:20px;}
+.tt ul li #t1{text-align:center;background:url(_files/images/20160415094715449.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+.tt ul li #t2{text-align:center;background:url(_files/images/20160415094715455.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+.tt ul li #t3{text-align:center;background:url(_files/images/20160415094715166.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+
+.tt ul li:hover{list-style-type:none;text-align:center;margin-left:105px;float:left;background-color:#e93424;padding:0 15px 30px 15px;margin-top:20px;}
+.tt ul li:hover #t1{text-align:center;background:url(_files/images/zan.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+.tt ul li:hover #t2{text-align:center;background:url(_files/images/kunzy.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+.tt ul li:hover #t3{text-align:center;background:url(_files/images/xiao.png) center top no-repeat;height:100px;width:300px;margin-top:50px;}
+.tt ul li:hover h2,.tt ul li:hover p{color:#FFF;}
+</style></div><div id="box754d94b41977edfab13eb0dc9e38ecd6" class="block block_text  iscenter  add " style="width:745px;height:65px;top:423px;left:50%;margin-left:-372.5px; overflow:hidden;z-index:110;"><h1 class="rbh" style="box-sizing:border-box;font-size:24px;margin:0px 0px 36px;font-family:Arvo, serif;font-weight:inherit;line-height:25px;color:#333333;padding:0px;border:0px;font-stretch:inherit;vertical-align:baseline;text-align:center;"><span style="font-family:'Microsoft YaHei';">~~~~~~~ &nbsp; 投资有风险，入市需谨慎！ &nbsp;&nbsp;</span><span style="font-family:'Microsoft YaHei';font-weight:inherit;">~~~~~~~</span></h1></div><div id="boxaaa77a0735b6312a741f903324a022b2" class="block block_text  add " style="border-top: px dashed;border-right: px dashed;border-bottom: px dashed;border-left: px dashed;width:100%;height:351px;top:0px;left:0px; overflow:hidden;z-index:110; background-color:#ECF0F1;  background-repeat:repeat; ">&nbsp;</div></div>
+</div>
+
+
+    [#include "inc_footer.html"/]
+</div>
+</body>
+</html>
+[/#escape]

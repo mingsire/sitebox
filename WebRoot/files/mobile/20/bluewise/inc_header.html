@@ -1,0 +1,61 @@
+<div id="top"><div id="box0d30143b0ac1a28b5f02dc4ed74e6062" class="block block_mini_menu  fakeabsolute  add  mini_menu" style="width:320px;height:55px;top:0px;left:0px;z-index:110;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="showmini">
+	<tr>
+		<td class="back">
+			<a href="javascript:history.go(-1);">返回</a>
+		</td>
+		<td>
+			<div class="mini_btitle"><span class="i"></span>公司简介</div>
+		</td>
+		<td class="r">
+			<div id="mini_menu_e3a0629cee6dbd0a211ab379a406f0fb" class="menu_ul"><p class="mini_title">点我</p></div>
+			<div style="display:none" id="showmenuli">
+				<p class="tarr"></p>
+				<ul>
+					[@NodeList;list]
+			        	<li><a href='${ctx}/'>网站首页</a></li>  
+						[#list list as node]
+			 		 		<li><a href="${node.url}">${node.name}</a></li>
+						[/#list]
+					[/@NodeList]
+				</ul>
+			</div>
+		</td>
+	</tr>
+</table>
+<script>
+  (function(){
+    var mini_menu = $('#mini_menu_e3a0629cee6dbd0a211ab379a406f0fb');
+    mini_menu.click(function(event) {
+      mini_menu.next().toggle();
+      $('body').one('click', function(event) {
+        //console.log('test');
+        mini_menu.next().hide();
+      });
+      return false;
+    });
+  })();
+</script></div><div class="placeholder" data-fid="151021" style="width:320px;height:55px;float:;"></div><div id="box6ecd032ef5f4131216a8415d51bcd302" class="block block_logo  fakeabsolute " style="width:320px;height:129px;top:55px;left:0px; overflow:hidden;"><div id="logo"><table style="width:100%"><tr><td><a href='index.html'><img src='_files/mobile/picture/mobile_logo.png'  border=0 align=absmiddle></a></td></tr></table></div></div><div class="placeholder" data-fid="151059" style="width:320px;height:129px;float:;"></div></div>    <div id="mainmenu"><div id="boxaeee49efcaf6f6f3417bbc920f8a2579" class="block block_prodsearch  fakeabsolute  add " style="width:320px;height:52px;top:0px;left:0px; overflow:hidden;z-index:110;"><div id="prodsearch">
+<input name="pkeyword" id="pkeyword" class="pkeyword_ef452c63f81d0105dd4486f775adec81" size="20" class="txt" maxlength="50">
+<input type="button" id="psbt" class="btn" value="搜索产品" onclick="product_search_ef452c63f81d0105dd4486f775adec81()">
+</div>
+<SCRIPT language=javascript>
+function product_search_ef452c63f81d0105dd4486f775adec81(){
+	var kw=$('.pkeyword_ef452c63f81d0105dd4486f775adec81').val();
+	var sgid="";
+
+location.href = "#"+kw+sgid;
+
+}
+
+$('.pkeyword_ef452c63f81d0105dd4486f775adec81').val(decodeURIComponent(Request("pkeyword")));
+
+</SCRIPT></div><div class="placeholder" data-fid="151052" style="width:320px;height:52px;float:;"></div>
+
+	<div id="box8aedd999e7043368b5981de9d497024f" class="block block_homelink  fakeabsolute  add " style="width:320px;height:30px;top:52px;left:0px; overflow:hidden;z-index:110;">
+		<span class="homelink">
+			当前位置   [#list node.hierarchy as n] -><a href="${n.url}">${n.name}</a>[/#list]
+		</span>
+	</div>
+	<div class="placeholder" data-fid="151061" style="width:320px;height:30px;float:;"></div>
+	
+</div>

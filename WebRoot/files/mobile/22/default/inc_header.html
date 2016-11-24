@@ -1,0 +1,25 @@
+  <!--Logo 开始-->
+  <div id="logo">
+   <div class="WebLogo">
+    <a href="/"><img src="_files/mobile/picture/logo.png" /></a>
+   </div>
+  </div>
+  <!--Logo 结束-->
+  <!--导航条 开始-->
+  <div id="navigation">
+   <!-- 实现方式1 {/*  
+    <ul class="navigationlist"><li  ><a href="/"  class="current">网站首页</a></li><li  ><a href="/wap/aboutus.html"  >关于我们</a></li><li  ><a href="/wap/news.html"  >新闻资讯</a></li><li style="background-image:none;" ><a href="/wap/product.html"  >经营项目</a></li><li  ><a href="/wap/case.html"  >精品案例</a></li><li  ><a href="/wap/contactus.html"  >联系我们</a></li></ul>*/ }-->
+   <table cellspacing="1" cellpadding="0" align="center">
+    <tbody>
+       [@NodeList;list]
+			[#list list as nodet]
+				[#if nodet_index==0]<tr>[/#if]
+			      <td><a href="[#if nodet_index==0]${ctx}/[#else]${nodet.url}[/#if]" >${nodet.name}</a></td>
+			      [#if (nodet_index+1)%3==0]</tr><tr>[/#if]
+			[/#list]
+			</tr>
+		[/@NodeList]
+    </tbody>
+   </table>
+  </div>
+  <!--导航条 结束-->

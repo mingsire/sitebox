@@ -1,0 +1,65 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>${site.name }</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="${site.name }" />
+  <meta name="keywords" content="${site.name }" />
+  <meta name="description" content="${site.name }" />
+  <link href="favicon.ico" type="image/x-icon" rel="icon" />
+  <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="_files/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="_files/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="_files/js/common.js"></script>
+  <script type="text/javascript" src="_files/js/jquery.superslide.js"></script>
+  <!--[if lte IE 6]><script type="text/javascript" src="_files/js/minmax.js"></script><script type="text/javascript" src="_files/js/pngfix.js"></script><script language="javascript" type="text/javascript">EvPNG.fix("#logo img");</script><![endif]-->
+ </head>
+ <body class="body_index">
+  [#include "inc_header.html"/]
+  <!--主体内容 开始-->
+  <div class="single">
+   <div class="subchannel_main">
+    <div class="subchannel">
+     	[@NodeList parentId=node.id;nodeList]
+ 	 		<ul class="subchannellist">
+  	 	  [#list nodeList as node]
+		      <li class="depth1">[@A bean=node target="_blank"/]</li>
+  		  [/#list]
+  	 		</ul>
+ 	 	[/@NodeList]
+     </ul>
+    </div>
+   </div>
+   <!--右侧区域 开始-->
+   <div id="right">
+    <div class="right_title">
+     <!--当前位置 开始-->
+     <div id="location">
+      <b>当前位置：</b>
+      <a href="/" target="_self">网站首页</a>&nbsp;&gt;&gt;&nbsp;
+      <a href="${node.url }" target="_self">${node.name }</a>
+     </div>
+     <!--当前位置 结束-->
+     <h2><img src="_files/images/titleleftbg.png" align="absmiddle" />${node.name }<img src="_files/images/titlerightbg.png" align="absmiddle" /></h2>
+    </div>
+    <div class="right_body">
+     <div class="ChannelContent">
+       [#noescape]${node.text}[/#noescape]
+     </div>
+    </div>
+    <div class="right_bottom"></div>
+   </div>
+   <!--右侧区域 结束-->
+   <div class="clear"></div>
+  </div>
+  <!--主体内容 结束-->
+  <!-- 友情链接 开始-->
+  [#include "inc_link_friend.html"/]
+  <!-- 友情链接 结束-->
+  <!-- 底部版权 开始-->
+  [#include "inc_footer.html"/]
+  <!-- 底部版权 结束-->
+ </body>
+</html>
+[/#escape]
